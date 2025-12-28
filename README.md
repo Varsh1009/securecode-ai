@@ -1,16 +1,22 @@
 # 🛡️ SecureCode AI
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue.svg)](https://www.typescriptlang.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.108-green.svg)](https://fastapi.tiangolo.com/)
+[![React](https://img.shields.io/badge/React-18-blue.svg)](https://reactjs.org/)
+
 Real-time code vulnerability detection IDE plugin with ML-powered analysis and runtime telemetry.
 
-## 🚀 Features
+##  Features
 
-- ✅ Real-time vulnerability detection as you type
-- ✅ ML-powered analysis using fine-tuned CodeBERT
-- ✅ Natural language explanations of vulnerabilities
-- ✅ Runtime telemetry and performance monitoring
-- ✅ VS Code extension with inline suggestions
-- ✅ Web dashboard for security analytics
-- ✅ CI/CD integration
+-  Real-time vulnerability detection as you type
+- ML-powered analysis using fine-tuned CodeBERT
+-  Natural language explanations of vulnerabilities
+-  Runtime telemetry and performance monitoring
+- VS Code extension with inline suggestions
+- Web dashboard for security analytics
+-  CI/CD integration
 
 ## 🏗️ Architecture
 ```
@@ -68,6 +74,4 @@ docker-compose ps
 **Shrivarshini Narayanan**  
 [LinkedIn](https://linkedin.com/in/shrivarshini-narayanan) | [GitHub](https://github.com/Varsh1009)
 
----
 
-Built with ❤️ for secure coding
