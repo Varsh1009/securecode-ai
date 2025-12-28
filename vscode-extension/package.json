@@ -1,0 +1,100 @@
+{
+  "name": "securecode-ai",
+  "displayName": "SecureCode AI",
+  "description": "Real-time code vulnerability detection powered by AI",
+  "version": "0.1.0",
+  "publisher": "securecode",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Linters",
+    "Programming Languages",
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "securecode.scanFile",
+        "title": "SecureCode: Scan Current File",
+        "icon": "$(shield)"
+      },
+      {
+        "command": "securecode.scanProject",
+        "title": "SecureCode: Scan Entire Project"
+      },
+      {
+        "command": "securecode.clearDiagnostics",
+        "title": "SecureCode: Clear All Warnings"
+      },
+      {
+  "command": "securecode.showStats",
+  "title": "SecureCode: Show Statistics"
+},
+{
+  "command": "securecode.ignoreWarning",
+  "title": "SecureCode: Ignore Warning"
+}
+    ],
+    "configuration": {
+      "title": "SecureCode AI",
+      "properties": {
+        "securecode.apiUrl": {
+          "type": "string",
+          "default": "http://localhost:8001",
+          "description": "SecureCode API URL"
+        },
+        "securecode.realTimeAnalysis": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable real-time analysis as you type"
+        },
+        "securecode.debounceDelay": {
+          "type": "number",
+          "default": 1000,
+          "description": "Delay (ms) before analyzing after typing stops"
+        }
+      }
+    },
+    "colors": [
+      {
+        "id": "securecode.criticalSeverity",
+        "description": "Color for critical vulnerabilities",
+        "defaults": {
+          "dark": "#ff0000",
+          "light": "#cc0000"
+        }
+      },
+      {
+        "id": "securecode.highSeverity",
+        "description": "Color for high severity vulnerabilities",
+        "defaults": {
+          "dark": "#ff8800",
+          "light": "#dd6600"
+        }
+      }
+      
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "node build.js",
+    "watch": "node build.js --watch",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^2.22.0",
+    "esbuild": "^0.19.11",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "axios": "^1.6.5",
+    "ws": "^8.16.0"
+  }
+}
